@@ -26,7 +26,7 @@ A package which provides functions to encrypt and decrypt text using the Caesar 
 
 #### Run
 
-Package does not run independently. See tests in order to test functionality.
+Package does not run independently. Functions for `encrypt`, `decrypt`, and `crack` are located in `caesar_cipher.cipher`. See tests in order to test functionality.
 
 #### Tests
 
