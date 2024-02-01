@@ -2,7 +2,14 @@ from caesar_cipher.english_checker import count_english_words
 
 def encrypt(plain_text, shift_key):
     """
-    
+    Encrypts a text string using the Caesar cipher shift method given a value to shift the letters by. Only shifts letters, all other characters (numbers, punctuation, etc.) will remain in place as plain text.
+
+    Parameters:
+        plain_text (string): string to be encrypted
+        shift_key (integer): value to shift each letter by in the english alphabet
+
+    Returns:
+        string: encrypted text with letters shifted
     """
 
     number_of_characters = 26
@@ -33,14 +40,27 @@ def encrypt(plain_text, shift_key):
 
 def decrypt(encrypted_text, shift_key):
     """
-    
+    Decrypts a text string which was encrypted using the Caesar cipher shift method given a value to un-shift the letters by. Only shifts letters, all other characters (numbers, punctuation, etc.) will remain in place as plain text.
+
+    Parameters:
+        encrypted_text (string): string to be decrypted
+        shift_key (integer): value to shift each letter by in the english alphabet
+
+    Returns:
+        string: decrypted text with letters shifted
     """
 
     return encrypt(encrypted_text, -shift_key)
 
 def crack(encrypted_text):
     """
-    
+    Given a text string which was encrypted using the Caesar cipher shift method uses brute force to determine all possible decryptions then evaluates these decryptions to determine which has the highest amount of english words, returning the decrypted text.
+
+    Parameters:
+        encrypted_text (string): string to be decrypted
+
+    Returns:
+        string: decrypted text, if the decrypted text has less than 50% english words returns an empty string
     """
 
     # stores the decrypted text candidates and their associated counts of english words for evaluation

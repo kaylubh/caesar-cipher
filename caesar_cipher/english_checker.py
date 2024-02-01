@@ -3,7 +3,13 @@ from caesar_cipher.corpus import word_list, name_list
 
 def count_english_words(text):
     """
-    
+    Given a string of text, compares the words in text against a corpus of english words to determine the number of english words in the text. Assumes the words are separated by spaces. Removes all other characters besides letters (numbers, punctuation, etc.) before checking the word.
+
+    Parameters:
+        text (string): text to be checked for english words
+
+    Returns:
+        integer: count of english words in input text
     """
 
     candidate_words = []
